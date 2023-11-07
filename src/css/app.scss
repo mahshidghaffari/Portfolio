@@ -1,0 +1,205 @@
+// app global css in SCSS form
+@import 'dark.theme';
+@import 'light.theme';
+@import "media.query";
+
+:root {
+  //--q-system-dark: #1d1b2f;
+  //--q-system-semi-dark: #222041;#a4ff91
+  //--q-color-system-primary-dark: #99ffb1;
+  --q-color-system-primary-in-dark: #a4ff91;
+  --q-color-system-primary-in-light: #4c7753;
+  --q-color-text-in-dark: #fff;
+  --q-color-text-in-light: #323232;
+  --q-color-section-bg-in-dark: #1D1D1D;
+  --q-color-section-bg-in-light: #fff;
+  --q-color-page-bg-in-dark: #121212;
+  --q-color-page-bg-in-light: #85898a;
+  --q-color-page-bg-in-light-secondary: #e5e6e8;
+
+  --q-color-lemon-green: #52d379;
+  --q-color-lemon-yellow: #edff20;
+}
+
+html[dir="rtl"],
+html[dir="rtl"] body {
+  font-size: 16px;
+   font-family: 'Vazir FD', sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -webkit-text-size-adjust: 100%;
+ }
+html[dir="ltr"],
+html[dir="ltr"] body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+/* Track */
+.body--dark ::-webkit-scrollbar-track {
+  background: var(--q-color-section-bg-in-dark);
+  border-radius: 8px;
+}
+/* Track */
+.body--light ::-webkit-scrollbar-track {
+  background: var(--q-color-section-bg-in-light);
+  border-radius: 8px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--q-color-system-primary-in-light);
+  border-radius: 8px;
+}
+
+.image-cover-top{
+  object-fit: cover;
+  object-position: 50% 5% !important;
+}
+
+.custom-rounded-borders{
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+.menu-borders{
+  border-radius: 16px;
+  -moz-border-radius:  16px;
+  -webkit-border-radius:  16px;
+}
+.custom-rounded-borders-right{
+  border-radius: 0 8px 8px 0;
+  -moz-border-radius: 0 8px 8px 0;
+  -webkit-border-radius: 0 8px 8px 0;
+}
+.custom-rounded-borders-left{
+  border-radius: 8px 0 0 8px;
+  -moz-border-radius: 8px 0 0 8px;
+  -webkit-border-radius: 8px 0 0 8px;
+}
+.custom-rounded-borders-top{
+  border-radius: 8px 8px 0 0;
+  -moz-border-radius: 8px 8px 0 0;
+  -webkit-border-radius: 8px 8px 0 0;
+}
+.custom-rounded-borders-bottom{
+  border-radius: 0 0 8px 8px;
+  -moz-border-radius: 0 0 8px 8px;
+  -webkit-border-radius: 0 0 8px 8px;
+}
+
+.card-shadow-left:before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 10px 10px 15px rgba(0,0,0,.05);
+  z-index: -1;
+}
+.card-shadow-left:after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -15px;
+  top: -15px;
+  background: linear-gradient( 135deg, rgba(76, 119, 83, 0.4) 0%, rgba(76, 119, 83, 0.01) 100% );
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  z-index: -1;
+}
+
+.profile-image-size{
+  width: 100%;
+  height: 60%;
+  max-height: 400px;
+}
+
+.drawer-item{
+  min-width: 84px;
+  padding: 8px 8px !important;
+}
+
+.team-btn {
+  border-radius: 8px;
+  font-size: 12px;
+  transition: 0.5s;
+}
+
+.download-btn{
+  height: 64px;
+}
+
+.section-title:before{
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  z-index: 0;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+}
+
+.page-section:before, .page-section:after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 20px;
+  height: 24px;
+  border-radius: 8px;
+  z-index: 3;
+}
+.page-section:before{
+  top: 16px;
+}
+.page-section:after{
+  bottom: 16px;
+}
+.q-btn.no-hover .q-focus-helper {
+  display: none;
+}
+
+.work-gallery .q-carousel__slide {
+  border-radius: 16px;
+}
+.work-gallery .q-carousel__slide{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+.work-gallery.fullscreen .q-carousel__slide {
+  background-size: contain !important;
+}
+
+.system-primary-link, .system-primary-hover{
+  transition: 0.5s;
+}
+.system-primary-link, .system-primary-link:hover, .system-primary-link:focus, .system-primary-link:active, .system-primary-link:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.work-gallery .q-carousel__thumbnail--inactive{
+  border: 1px solid #fff;
+}
+
+.work-gallery .q-carousel__thumbnail--active{
+  border: 1px solid var(--q-color-lemon-green);
+}
+html[dir="rtl"] .ltr{
+  direction: rtl !important;
+}
+html[dir="ltr"] .ltr{
+  direction: ltr !important;
+}
