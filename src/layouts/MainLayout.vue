@@ -94,7 +94,7 @@
                        class="full-width download-btn"
                        flat
                        icon="mdi-cloud-download"
-                       href="Mahshid frontend.pdf"
+                       href="Mahshid_front_CV.pdf"
                        download/>
                 <hr v-if="$q.screen.lt.md" class="q-mb-md full-width section-hr"/>
               </div>
