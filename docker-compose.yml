@@ -1,8 +1,8 @@
 version: '3'
 services:
-    portfolio:
+    mahshid.info:
       build: .
-      image: portfolio-image
+      image: mahshid.info
       ports:
         - "8080:80"
-
+      restart: always
